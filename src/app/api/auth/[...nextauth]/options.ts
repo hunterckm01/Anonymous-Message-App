@@ -1,6 +1,6 @@
  import { NextAuthOptions } from "next-auth";
  import CredentialsProvider from "next-auth/providers/credentials";
- import bcrypt from 'bcryptjs'
+ import bcrypt from 'bcrypt'
  import dbConnect from "@/lib/dbConnect";
  import UserModel from "@/model/user.model";
 
@@ -70,5 +70,5 @@
     session:{
         strategy:"jwt"
     },
-    secret: process.env.NEXTAUTH_SECRET 
+    secret: process.env.NEXT_AUTH_SECRET 
  }
