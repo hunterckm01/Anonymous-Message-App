@@ -1,4 +1,4 @@
-import { Html, Head, Font, Preview, Heading, Row, Section, Text} from '@react-email/components';
+import { Html, Head, Font, Preview, Heading, Row, Section, Text } from '@react-email/components';
 
 interface VerificationEmailProps {
   username: string;
@@ -6,11 +6,12 @@ interface VerificationEmailProps {
 }
 
 export default function VerificationEmail({ username, otp }: VerificationEmailProps) {
+  // console.log(username, otp);
   return (
     <Html lang="en" dir="ltr">
       <Head>
         <title>Verification Code</title>
-        <Font
+        {/* <Font
           fontFamily="Roboto"
           fallbackFontFamily="Verdana"
           webFont={{
@@ -19,9 +20,9 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
           }}
           fontWeight={400}
           fontStyle="normal"
-        />
+        /> */}
       </Head>
-      <Preview>Here&apos;s your verification code: {otp}</Preview>
+      <Preview>Here's your verification code: {otp}</Preview>
       <Section>
         <Row>
           <Heading as="h2">Hello {username},</Heading>

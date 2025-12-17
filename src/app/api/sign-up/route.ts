@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt'
 
 export async function POST(request: Request){
     await dbConnect();
-    console.log("Db connected successfully");
+    // console.log("Db connected successfully");
     try{
         const {username, email, password} = await request.json();
         const existingVerifiedUsername = await UserModel.findOne({username, isVerified: true})
